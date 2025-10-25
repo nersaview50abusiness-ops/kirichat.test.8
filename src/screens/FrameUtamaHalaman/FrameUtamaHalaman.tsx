@@ -12,24 +12,25 @@ export const FrameUtamaHalaman = (): JSX.Element => {
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
     }
-    hoverTimeoutRef.current = setTimeout(() => {
-      setIsCollapsed(false);
-    }, 600);
+    setIsCollapsed(false);
   };
 
   const handleMouseLeave = () => {
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
     }
-    setIsCollapsed(true);
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsCollapsed(true);
+    }, 300);
   };
 
   return (
     <div className="flex flex-col h-screen bg-white">
       <Topbar />
 
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden relative">
         <div
+          className="absolute left-0 top-0 h-full z-20"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -39,7 +40,7 @@ export const FrameUtamaHalaman = (): JSX.Element => {
           />
         </div>
 
-        <main className="flex flex-col flex-1 overflow-hidden">
+        <main className="flex flex-col flex-1 overflow-hidden w-full">
           <div className="flex flex-col p-5 bg-white">
             <h1 className="[font-family:'Inter',Helvetica] font-semibold text-[#1b1d23] text-[20px] tracking-[0] leading-[27px]">
               Agents
