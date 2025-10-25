@@ -9,7 +9,7 @@ export const Topbar = (): JSX.Element => {
       <div className="flex items-center gap-[42px]">
         <div className="flex items-center gap-3">
           <img
-            className="w-[30px] h-[30px]"
+            className="h-6"
             alt="Symbol kirichat"
             src="/symbol-kirichat.svg"
           />
