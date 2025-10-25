@@ -13,7 +13,7 @@ const navigationItems = [
   { icon: "/dashboard-icon.svg", label: "Dashboard", active: false, isCustomIcon: true },
   { icon: "/agents-icon.svg", label: "Agents", active: true, isCustomIcon: true },
   { icon: "/usage-icon.svg", label: "Usage", active: false, isCustomIcon: true },
-  { icon: MessageSquareIcon, label: "Chat Log", active: false },
+  { icon: "/chat-log-icon.svg", label: "Chat Log", active: false, isCustomIcon: true },
   {
     icon: SettingsIcon,
     label: "Framework Settings",
