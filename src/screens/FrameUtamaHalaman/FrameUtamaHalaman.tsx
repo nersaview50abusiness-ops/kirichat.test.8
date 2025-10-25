@@ -5,7 +5,7 @@ import { Topbar } from "../../components/Topbar";
 import { Sidebar } from "../../components/Sidebar";
 
 export const FrameUtamaHalaman = (): JSX.Element => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
