@@ -5,46 +5,46 @@ import { Button } from "./ui/button";
 
 export const Topbar = (): JSX.Element => {
   return (
-    <header className="flex items-center justify-between w-full h-20 px-5 py-2.5 bg-white border-b border-[#e0e2e7]">
-      <div className="flex items-center gap-[50px]">
+    <header className="flex items-center justify-between w-full h-[68px] px-4 py-2 bg-white border-b border-[#e0e2e7]">
+      <div className="flex items-center gap-[42px]">
         <div className="flex items-center gap-3">
           <img
-            className="w-9 h-9"
+            className="w-[30px] h-[30px]"
             alt="Symbol kirichat"
             src="/symbol-kirichat.svg"
           />
-          <div className="[font-family:'Urbanist',Helvetica] font-bold text-[#1b1d23] text-[32px] tracking-[-0.32px] leading-[48px] whitespace-nowrap">
+          <div className="[font-family:'Urbanist',Helvetica] font-bold text-[#1b1d23] text-[27px] tracking-[-0.27px] leading-[40px] whitespace-nowrap">
             Kirichat
           </div>
           <Badge
             variant="outline"
-            className="h-7 px-1.5 py-0.5 bg-white rounded-lg border-[#e0e2e7] shadow-innere-shadow-gray-large"
+            className="h-6 px-1.5 py-0.5 bg-white rounded-lg border-[#e0e2e7] shadow-innere-shadow-gray-large"
           >
-            <span className="[font-family:'Urbanist',Helvetica] font-semibold text-[#3d4350] text-base tracking-[0.20px]">
+            <span className="[font-family:'Urbanist',Helvetica] font-semibold text-[#3d4350] text-sm tracking-[0.17px]">
               Pro
             </span>
           </Badge>
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="flex flex-col justify-center w-[231px] h-10 px-4 py-1.5 bg-white rounded-[10px] border border-[#e0e2e7]">
-            <span className="[font-family:'Inter',Helvetica] font-semibold text-[#3d4350] text-xs tracking-[0] leading-[15px] truncate">
+          <div className="flex flex-col justify-center w-[196px] h-[34px] px-3 py-1 bg-white rounded-[10px] border border-[#e0e2e7]">
+            <span className="[font-family:'Inter',Helvetica] font-semibold text-[#3d4350] text-[10px] tracking-[0] leading-[13px] truncate">
               Kirichat Framework Nama
             </span>
           </div>
           <Button
             variant="ghost"
             size="icon"
-            className="h-5 w-5 p-0.5 rounded-lg"
+            className="h-[17px] w-[17px] p-0.5 rounded-lg"
           >
-            <img className="w-4 h-4" alt="Component" src="/component-1.svg" />
+            <img className="w-[14px] h-[14px]" alt="Component" src="/component-1.svg" />
           </Button>
         </div>
       </div>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-5">
         <img className="h-auto" alt="Button group" src="/button-group.svg" />
-        <Avatar className="w-10 h-10">
+        <Avatar className="w-[34px] h-[34px]">
           <AvatarImage src="/ellipse-2082.png" alt="User avatar" />
           <AvatarFallback>U</AvatarFallback>
         </Avatar>
