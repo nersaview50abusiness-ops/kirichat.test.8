@@ -1,6 +1,7 @@
 import {
   BarChart3Icon,
   ChevronDownIcon,
+  ChevronLeftIcon,
   ChevronRightIcon,
   LayoutDashboardIcon,
   MessageSquareIcon,
@@ -32,17 +33,19 @@ const submenuItems = [
 
 interface SidebarProps {
   isCollapsed: boolean;
+  onToggleCollapse: () => void;
 }
 
-export const Sidebar = ({ isCollapsed }: SidebarProps): JSX.Element => {
+export const Sidebar = ({ isCollapsed, onToggleCollapse }: SidebarProps): JSX.Element => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   return (
-    <aside
-      className={`flex flex-col h-full px-5 py-4 bg-white border-r border-[#e0e2e7] transition-all duration-300 ease-in-out ${
-        isCollapsed ? "w-[70px]" : "w-[245px]"
-      }`}
-    >
+    <div className="flex h-full">
+      <aside
+        className={`flex flex-col h-full px-5 py-4 bg-white border-r border-[#e0e2e7] transition-all duration-300 ease-in-out ${
+          isCollapsed ? "w-[70px]" : "w-[245px]"
+        }`}
+      >
       <nav className="flex flex-col gap-5">
         <div className="flex flex-col gap-1">
           {navigationItems.map((item, index) => (
@@ -118,5 +121,21 @@ export const Sidebar = ({ isCollapsed }: SidebarProps): JSX.Element => {
         </div>
       </nav>
     </aside>
+
+    <div className="flex w-5 h-full items-center justify-center relative group">
+      <button
+        onClick={onToggleCollapse}
+        className="absolute z-10 w-6 h-6 bg-white border border-[#e0e2e7] rounded-full flex items-center justify-center shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-200 opacity-0 group-hover:opacity-100"
+        aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+      >
+        {isCollapsed ? (
+          <ChevronRightIcon className="w-4 h-4 text-[#3d4350]" />
+        ) : (
+          <ChevronLeftIcon className="w-4 h-4 text-[#3d4350]" />
+        )}
+      </button>
+      <div className="w-[3px] h-5 bg-[#d9d9d9] rounded-[33554400px]" />
+    </div>
+  </div>
   );
 };
