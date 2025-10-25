@@ -54,8 +54,8 @@ export const Sidebar = (): JSX.Element => {
               </Button>
 
               {item.hasSubmenu && (
-                <div className="flex gap-[19px] mt-1">
-                  <div className="w-0.5 bg-[#d9d9d9]" />
+                <div className="flex gap-[19px]">
+                  <div className="w-0.5 bg-[#d9d9d9] ml-[15px]" />
                   <div className="flex flex-col gap-[2px] flex-1">
                     {submenuItems.map((subitem, subindex) => (
                       <Button
