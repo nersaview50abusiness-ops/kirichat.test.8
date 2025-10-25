@@ -49,8 +49,8 @@ export const Sidebar = ({ isCollapsed }: SidebarProps): JSX.Element => {
             <React.Fragment key={index}>
               <Button
                 variant={item.active ? "outline" : "ghost"}
-                className={`w-full h-[34px] gap-2.5 px-3 py-1.5 rounded-[10px] ${
-                  isCollapsed ? "justify-center" : "justify-start"
+                className={`w-full h-[34px] gap-2.5 rounded-[10px] ${
+                  isCollapsed ? "justify-center px-2" : "justify-start px-3 py-1.5"
                 } ${
                   item.active ? "bg-white border-[#cdcccc]" : ""
                 }`}
@@ -60,11 +60,13 @@ export const Sidebar = ({ isCollapsed }: SidebarProps): JSX.Element => {
                   }
                 }}
               >
-                {item.isCustomIcon ? (
-                  <img src={item.icon as string} alt="" className="w-[17px] h-[17px] flex-shrink-0" />
-                ) : (
-                  <item.icon className="w-[17px] h-[17px] flex-shrink-0" />
-                )}
+                <div className="w-[17px] h-[17px] flex items-center justify-center flex-shrink-0">
+                  {item.isCustomIcon ? (
+                    <img src={item.icon as string} alt="" className="w-[17px] h-[17px]" />
+                  ) : (
+                    <item.icon className="w-[17px] h-[17px]" />
+                  )}
+                </div>
                 {!isCollapsed && (
                   <>
                     <span
