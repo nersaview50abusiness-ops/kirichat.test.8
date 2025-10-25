@@ -41,7 +41,7 @@ export const FrameUtamaHalaman = (): JSX.Element => {
         </div>
 
         <main className="flex flex-col flex-1 overflow-hidden w-full">
-          <div className="flex flex-col p-5 bg-white">
+          <div className="flex flex-col p-5 bg-white max-w-[1400px] mx-auto w-full">
             <h1 className="[font-family:'Inter',Helvetica] font-semibold text-[#1b1d23] text-[20px] tracking-[0] leading-[27px]">
               Agents
             </h1>
@@ -50,7 +50,7 @@ export const FrameUtamaHalaman = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center flex-1 bg-white">
+          <div className="flex flex-col items-center justify-center flex-1 bg-white max-w-[1400px] mx-auto w-full">
             <div className="flex flex-col items-center gap-[18px] w-full max-w-[353px]">
               <div
                 className="flex flex-col w-full h-[124px] items-start gap-2 px-[77px] py-[26px] rounded-[16px] overflow-hidden bg-cover bg-center"
