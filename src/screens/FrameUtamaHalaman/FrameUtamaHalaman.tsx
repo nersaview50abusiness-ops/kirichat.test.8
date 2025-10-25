@@ -1,18 +1,40 @@
 import { ChevronLeftIcon, ChevronRightIcon, PlusIcon } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button } from "../../components/ui/button";
 import { Topbar } from "../../components/Topbar";
 import { Sidebar } from "../../components/Sidebar";
 
 export const FrameUtamaHalaman = (): JSX.Element => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsCollapsed(false);
+    }, 600);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    setIsCollapsed(true);
+  };
 
   return (
     <div className="flex flex-col h-screen bg-white">
       <Topbar />
 
       <div className="flex flex-1 overflow-hidden">
-        <Sidebar isCollapsed={isCollapsed} />
+        <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Sidebar isCollapsed={isCollapsed} />
+        </div>
 
         <div className="flex w-5 h-full items-center justify-center relative group">
           <button
