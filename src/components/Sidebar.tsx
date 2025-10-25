@@ -49,7 +49,7 @@ export const Sidebar = ({ isCollapsed }: SidebarProps): JSX.Element => {
             <React.Fragment key={index}>
               <Button
                 variant={item.active ? "outline" : "ghost"}
-                className={`w-full h-[34px] gap-2.5 rounded-[10px] ${
+                className={`w-full h-[39px] gap-2.5 rounded-[10px] ${
                   isCollapsed ? "justify-center px-2" : "justify-start px-3 py-1.5"
                 } ${
                   item.active ? "bg-white border-[#cdcccc]" : ""
