@@ -42,8 +42,21 @@ export const Topbar = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="flex items-center gap-5">
-        <img className="h-auto" alt="Button group" src="/button-group.svg" />
+      <div className="flex items-center gap-3">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="w-[34px] h-[34px] p-2 rounded-lg hover:bg-gray-100"
+        >
+          <img className="w-[18px] h-[18px]" alt="Messages" src="/svg.svg" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="w-[34px] h-[34px] p-2 rounded-lg hover:bg-gray-100"
+        >
+          <img className="w-[18px] h-[18px]" alt="Notifications" src="/svg-1.svg" />
+        </Button>
         <Avatar className="w-[34px] h-[34px]">
           <AvatarImage src="/ellipse-2082.png" alt="User avatar" />
           <AvatarFallback>U</AvatarFallback>
