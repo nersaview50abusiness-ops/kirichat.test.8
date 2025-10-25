@@ -10,7 +10,7 @@ import React from "react";
 import { Button } from "./ui/button";
 
 const navigationItems = [
-  { icon: LayoutDashboardIcon, label: "Dashboard", active: false },
+  { icon: "/dashboard-icon.svg", label: "Dashboard", active: false, isCustomIcon: true },
   { icon: UsersIcon, label: "Agents", active: true },
   { icon: BarChart3Icon, label: "Usage", active: false },
   { icon: MessageSquareIcon, label: "Chat Log", active: false },
@@ -42,7 +42,11 @@ export const Sidebar = (): JSX.Element => {
                   item.active ? "bg-white border-[#cdcccc]" : ""
                 }`}
               >
-                <item.icon className="w-[17px] h-[17px]" />
+                {item.isCustomIcon ? (
+                  <img src={item.icon as string} alt="" className="w-[17px] h-[17px]" />
+                ) : (
+                  <item.icon className="w-[17px] h-[17px]" />
+                )}
                 <span
                   className={`flex-1 text-left [font-family:'Inter',Helvetica] font-medium text-[14px] tracking-[0.17px] leading-5 ${
                     item.active ? "text-[#1b1d23]" : "text-[#3d4350]"
