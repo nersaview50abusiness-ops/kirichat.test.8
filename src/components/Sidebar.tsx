@@ -11,7 +11,7 @@ import { Button } from "./ui/button";
 
 const navigationItems = [
   { icon: "/dashboard-icon.svg", label: "Dashboard", active: false, isCustomIcon: true },
-  { icon: UsersIcon, label: "Agents", active: true },
+  { icon: "/agents-icon.svg", label: "Agents", active: true, isCustomIcon: true },
   { icon: BarChart3Icon, label: "Usage", active: false },
   { icon: MessageSquareIcon, label: "Chat Log", active: false },
   {
