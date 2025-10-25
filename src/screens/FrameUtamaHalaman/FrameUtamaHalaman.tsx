@@ -62,11 +62,11 @@ export const FrameUtamaHalaman = (): JSX.Element => {
                 customer question, book meetings, and more.
               </p>
 
-              <Button className="w-[155px] h-[34px] bg-[#316afe] hover:bg-[#2557d9] rounded-[10px] border border-solid shadow-[inset_0px_2px_8px_#ffffff8f,inset_-2px_-2px_12px_#ffffff8f]">
+              <Button className="flex items-center justify-center gap-2 w-[155px] h-[34px] bg-[#316afe] hover:bg-[#2557d9] rounded-[10px] border border-solid shadow-[inset_0px_2px_8px_#ffffff8f,inset_-2px_-2px_12px_#ffffff8f]">
                 <span className="[font-family:'Inter',Helvetica] font-semibold text-white text-[12px] tracking-[0.26px] leading-[17px]">
                   Create new agent
                 </span>
-                <PlusIcon className="w-[17px] h-[17px] ml-1.5" />
+                <PlusIcon className="w-[17px] h-[17px]" />
               </Button>
             </div>
           </div>
