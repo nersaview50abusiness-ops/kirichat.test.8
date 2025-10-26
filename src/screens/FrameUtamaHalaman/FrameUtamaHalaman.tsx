@@ -1,39 +1,18 @@
 import { Plus as PlusIcon } from "lucide-react";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Topbar } from "../../components/Topbar";
 import { Sidebar } from "../../components/Sidebar";
 
 export const FrameUtamaHalaman = (): JSX.Element => {
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const handleMouseEnter = () => {
-    if (hoverTimeoutRef.current) {
-      clearTimeout(hoverTimeoutRef.current);
-    }
-    setIsCollapsed(false);
-  };
-
-  const handleMouseLeave = () => {
-    if (hoverTimeoutRef.current) {
-      clearTimeout(hoverTimeoutRef.current);
-    }
-    hoverTimeoutRef.current = setTimeout(() => {
-      setIsCollapsed(true);
-    }, 300);
-  };
 
   return (
     <div className="flex flex-col h-screen bg-white">
       <Topbar />
 
       <div className="flex flex-1 overflow-hidden relative">
-        <div
-          className="absolute left-0 top-0 h-full z-20"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
+        <div className="absolute left-0 top-0 h-full z-20">
           <Sidebar
             isCollapsed={isCollapsed}
             onToggleCollapse={() => setIsCollapsed(!isCollapsed)}

@@ -125,18 +125,19 @@ export const Sidebar = ({ isCollapsed, onToggleCollapse }: SidebarProps): JSX.El
     <div className={`absolute h-full flex items-center justify-center transition-all duration-300 ease-in-out ${
       isCollapsed ? "left-[70px]" : "left-[245px]"
     }`}>
-      <button
-        onClick={onToggleCollapse}
-        className="absolute z-10 w-6 h-6 bg-white border border-[#e0e2e7] rounded-full flex items-center justify-center shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-200"
-        aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-      >
-        {isCollapsed ? (
-          <ChevronRightIcon className="w-4 h-4 text-[#3d4350]" />
-        ) : (
-          <ChevronLeftIcon className="w-4 h-4 text-[#3d4350]" />
-        )}
-      </button>
-      <div className="w-[3px] h-5 bg-[#d9d9d9] rounded-[33554400px]" />
+      <div className="relative h-full flex items-center justify-center w-[20px] bg-white border-r border-[#e0e2e7]">
+        <button
+          onClick={onToggleCollapse}
+          className="absolute z-10 w-6 h-6 bg-white border border-[#e0e2e7] rounded-full flex items-center justify-center shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-200"
+          aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          {isCollapsed ? (
+            <ChevronRightIcon className="w-4 h-4 text-[#3d4350]" />
+          ) : (
+            <ChevronLeftIcon className="w-4 h-4 text-[#3d4350]" />
+          )}
+        </button>
+      </div>
     </div>
   </div>
   );
